@@ -1,0 +1,38 @@
+{
+  "env": {
+    "browser": true,
+    "es6": true,
+    "jest": true
+  },
+  "extends": ["plugin:react/recommended", "airbnb"],
+  "globals": {
+    "Atomics": "readonly",
+    "SharedArrayBuffer": "readonly"
+  },
+  "parserOptions": {
+    "sourceType": "module"
+  },
+  "plugins": ["react"],
+  "rules": {
+    "no-sequences": "off",
+    "react/forbid-prop-types": 0,
+    "no-unused-expressions": "off",
+    "no-param-reassign": [2, {"props": false}],
+    "no-use-before-define": ["error", { "variables": false, "functions": false }],
+    "import/no-named-as-default": 0,
+    "react/require-default-props": "off",
+    "react/prop-types": [2, { "ignore": ["children","title", "addon", "amount", "type", "minutes"] }],
+    "react/jsx-filename-extension": [
+      "error",
+      {
+        "extensions": [".js", ".jsx"]
+      }
+    ],
+    "react/jsx-props-no-spreading": [
+      "off",
+      {
+      "custom": "ignore",
+      "html": "ignore"
+    }]
+  }
+}
